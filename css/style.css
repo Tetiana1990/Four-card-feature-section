@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Grey500: hsl(234, 12%, 34%);
+  --Grey400: hsl(212, 6%, 44%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  margin: 0;
+  background-color: var(--White);
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  padding: 2rem 1rem;
+}
+
+.technology {
+  max-width: 1100px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+.technology__header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.technology__category {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0;
+  color: var(--Grey400);
+}
+.technology h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  opacity: 0.7;
+}
+.technology__description {
+  max-width: 500px;
+  margin: 1rem auto 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--Grey500);
+}
+.technology__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.technology__item {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+.technology__item--supervisor {
+  border-top: 4px solid var(--Cyan);
+}
+.technology__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+.technology__text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--Grey400);
+}
+.technology__icon {
+  margin-top: auto;
+  align-self: flex-end;
+  width: 48px;
+  height: 48px;
+  margin: 1.5rem;
+}
+.technology__item--team-builder {
+  border-top: 4px solid var(--Red);
+}
+.technology__item--karma {
+  border-top: 4px solid var(--Orange);
+}
+.technology__item--calculator {
+  border-top: 4px solid var(--Blue);
+}
+.technology .attribution {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.3rem;
+  color: var(--Grey500);
+}
+.technology .attribution a {
+  text-decoration: none;
+  color: inherit;
+}
+.technology .attribution a:hover {
+  text-decoration: underline;
+}
+.technology .attribution p {
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .technology__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    align-items: center;
+  }
+  .technology__list .technology__item--supervisor {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    align-self: center;
+  }
+  .technology__list .technology__item--team-builder {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .technology__list .technology__item--karma {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .technology__list .technology__item--calculator {
+    grid-column: 3/4;
+    grid-row: 1/3;
+    align-self: center;
+  }
+}
